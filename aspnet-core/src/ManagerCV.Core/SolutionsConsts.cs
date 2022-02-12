@@ -1,6 +1,6 @@
 ﻿namespace ManagerCV
 {
-    public class ManagerCVConsts
+    public class SolutionsConsts
     {
         public const string LocalizationSourceName = "ManagerCV";
 

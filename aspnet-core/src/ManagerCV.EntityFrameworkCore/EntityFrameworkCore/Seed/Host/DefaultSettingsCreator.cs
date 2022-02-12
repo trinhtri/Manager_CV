@@ -20,7 +20,7 @@ namespace ManagerCV.EntityFrameworkCore.Seed.Host
         {
             int? tenantId = null;
 
-            if (ManagerCVConsts.MultiTenancyEnabled == false)
+            if (SolutionsConsts.MultiTenancyEnabled == false)
             {
                 tenantId = MultiTenancyConsts.DefaultTenantId;
             }

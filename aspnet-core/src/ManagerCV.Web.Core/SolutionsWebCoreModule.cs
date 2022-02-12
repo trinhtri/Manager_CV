@@ -19,17 +19,17 @@ using Abp.IO;
 namespace ManagerCV
 {
     [DependsOn(
-         typeof(ManagerCVApplicationModule),
+         typeof(SolutionsApplicationModule),
          typeof(ManagerCVEntityFrameworkModule),
          typeof(AbpAspNetCoreModule)
         ,typeof(AbpAspNetCoreSignalRModule)
      )]
-    public class ManagerCVWebCoreModule : AbpModule
+    public class SolutionsWebCoreModule : AbpModule
     {
         private readonly IWebHostEnvironment _env;
         private readonly IConfigurationRoot _appConfiguration;
 
-        public ManagerCVWebCoreModule(IWebHostEnvironment env)
+        public SolutionsWebCoreModule(IWebHostEnvironment env)
         {
             _env = env;
             _appConfiguration = env.GetAppConfiguration();
@@ -38,7 +38,7 @@ namespace ManagerCV
         public override void PreInitialize()
         {
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
-                ManagerCVConsts.ConnectionStringName
+                SolutionsConsts.ConnectionStringName
             );
 
             // Use database for language management
@@ -46,7 +46,7 @@ namespace ManagerCV
 
             Configuration.Modules.AbpAspNetCore()
                  .CreateControllersForAppServices(
-                     typeof(ManagerCVApplicationModule).GetAssembly()
+                     typeof(SolutionsApplicationModule).GetAssembly()
                  );
 
             ConfigureTokenAuth();
@@ -66,7 +66,7 @@ namespace ManagerCV
 
         public override void Initialize()
         {
-            IocManager.RegisterAssemblyByConvention(typeof(ManagerCVWebCoreModule).GetAssembly());
+            IocManager.RegisterAssemblyByConvention(typeof(SolutionsWebCoreModule).GetAssembly());
         }
 
         public override void PostInitialize()

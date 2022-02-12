@@ -18,7 +18,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ManagerCV.Language
 {
-	public class LanguageAppService : ManagerCVAppServiceBase, ILanguageAppService
+	public class LanguageAppService : SolutionsAppServiceBase, ILanguageAppService
 	{
 		private readonly IRepository<Models.CtgLanguage> _ctgLanguageRepository;
 		public LanguageAppService(IRepository<Models.CtgLanguage> ctgLanguageRepository)

@@ -18,8 +18,8 @@
     <LangVersion>7.2</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ManagerCV.Application\ManagerCV.Application.csproj" />
-    <ProjectReference Include="..\ManagerCV.EntityFrameworkCore\ManagerCV.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\ManagerCV.Application\Solutions.Application.csproj" />
+    <ProjectReference Include="..\ManagerCV.EntityFrameworkCore\Solutions.EntityFrameworkCore.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.0" />

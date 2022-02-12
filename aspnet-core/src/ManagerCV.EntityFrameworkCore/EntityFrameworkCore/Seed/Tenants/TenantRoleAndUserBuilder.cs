@@ -48,7 +48,7 @@ namespace ManagerCV.EntityFrameworkCore.Seed.Tenants
                 .ToList();
 
             var permissions = PermissionFinder
-                .GetAllPermissions(new ManagerCVAuthorizationProvider())
+                .GetAllPermissions(new SolutionsAuthorizationProvider())
                 .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Tenant) &&
                             !grantedPermissions.Contains(p.Name))
                 .ToList();

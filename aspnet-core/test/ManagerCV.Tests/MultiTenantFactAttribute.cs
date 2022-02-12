@@ -6,7 +6,7 @@ namespace ManagerCV.Tests
     {
         public MultiTenantFactAttribute()
         {
-            if (!ManagerCVConsts.MultiTenancyEnabled)
+            if (!SolutionsConsts.MultiTenancyEnabled)
             {
                 Skip = "MultiTenancy is disabled.";
             }

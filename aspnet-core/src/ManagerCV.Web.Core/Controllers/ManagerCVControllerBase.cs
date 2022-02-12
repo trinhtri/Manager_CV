@@ -8,7 +8,7 @@ namespace ManagerCV.Controllers
     {
         protected ManagerCVControllerBase()
         {
-            LocalizationSourceName = ManagerCVConsts.LocalizationSourceName;
+            LocalizationSourceName = SolutionsConsts.LocalizationSourceName;
         }
 
         protected void CheckErrors(IdentityResult identityResult)

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ManagerCV.DashboardInterview
 {
-    public class DashboardInterviewAppservice : ManagerCVAppServiceBase, IDashboardInterviewAppservice
+    public class DashboardInterviewAppservice : SolutionsAppServiceBase, IDashboardInterviewAppservice
     {
         private readonly IRepository<Models.Employee> _employeeRepository;
         public DashboardInterviewAppservice(IRepository<Models.Employee> employeeRepository)

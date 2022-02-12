@@ -12,15 +12,15 @@ namespace ManagerCV
     /// <summary>
     /// Derive your application services from this class.
     /// </summary>
-    public abstract class ManagerCVAppServiceBase : ApplicationService
+    public abstract class SolutionsAppServiceBase : ApplicationService
     {
         public TenantManager TenantManager { get; set; }
 
         public UserManager UserManager { get; set; }
 
-        protected ManagerCVAppServiceBase()
+        protected SolutionsAppServiceBase()
         {
-            LocalizationSourceName = ManagerCVConsts.LocalizationSourceName;
+            LocalizationSourceName = SolutionsConsts.LocalizationSourceName;
         }
 
         protected virtual async Task<User> GetCurrentUserAsync()

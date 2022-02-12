@@ -13,7 +13,7 @@ namespace ManagerCV.Web
     {
         public static string CalculateContentRootFolder()
         {
-            var coreAssemblyDirectoryPath = Path.GetDirectoryName(typeof(ManagerCVCoreModule).GetAssembly().Location);
+            var coreAssemblyDirectoryPath = Path.GetDirectoryName(typeof(SolutionsCoreModule).GetAssembly().Location);
             if (coreAssemblyDirectoryPath == null)
             {
                 throw new Exception("Could not find location of ManagerCV.Core assembly!");

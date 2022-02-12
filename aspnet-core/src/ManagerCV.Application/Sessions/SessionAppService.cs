@@ -5,7 +5,7 @@ using ManagerCV.Sessions.Dto;
 
 namespace ManagerCV.Sessions
 {
-    public class SessionAppService : ManagerCVAppServiceBase, ISessionAppService
+    public class SessionAppService : SolutionsAppServiceBase, ISessionAppService
     {
         [DisableAuditing]
         public async Task<GetCurrentLoginInformationsOutput> GetCurrentLoginInformations()

@@ -10,7 +10,7 @@ namespace ManagerCV.Authorization
     {
         public AbpLoginResultTypeHelper()
         {
-            LocalizationSourceName = ManagerCVConsts.LocalizationSourceName;
+            LocalizationSourceName = SolutionsConsts.LocalizationSourceName;
         }
 
         public Exception CreateExceptionForFailedLoginAttempt(AbpLoginResultType result, string usernameOrEmailAddress, string tenancyName)

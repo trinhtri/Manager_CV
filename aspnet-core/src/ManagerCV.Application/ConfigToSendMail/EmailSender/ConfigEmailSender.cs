@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 using ManagerCV.Configuration;
 namespace ManagerCV.ConfigToSendMail.EmailSender
 {
-	public class ConfigEmailSender : ManagerCVAppServiceBase, IConfigEmailSender
+	public class ConfigEmailSender : SolutionsAppServiceBase, IConfigEmailSender
 	{
 		private readonly IWebHostEnvironment _env;
 		private IConfigurationRoot _configRoot;

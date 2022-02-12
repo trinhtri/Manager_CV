@@ -24,6 +24,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ManagerCV.Core\ManagerCV.Core.csproj" />
+    <ProjectReference Include="..\ManagerCV.Core\Solutions.Core.csproj" />
   </ItemGroup>
 </Project>

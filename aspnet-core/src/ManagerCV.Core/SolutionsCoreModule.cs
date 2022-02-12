@@ -13,7 +13,7 @@ using ManagerCV.Timing;
 namespace ManagerCV
 {
     [DependsOn(typeof(AbpZeroCoreModule))]
-    public class ManagerCVCoreModule : AbpModule
+    public class SolutionsCoreModule : AbpModule
     {
         public override void PreInitialize()
         {
@@ -27,7 +27,7 @@ namespace ManagerCV
             ManagerCVLocalizationConfigurer.Configure(Configuration.Localization);
 
             // Enable this line to create a multi-tenant application.
-            Configuration.MultiTenancy.IsEnabled = ManagerCVConsts.MultiTenancyEnabled;
+            Configuration.MultiTenancy.IsEnabled = SolutionsConsts.MultiTenancyEnabled;
 
             // Configure roles
             AppRoleConfig.Configure(Configuration.Modules.Zero().RoleManagement);
@@ -37,7 +37,7 @@ namespace ManagerCV
 
         public override void Initialize()
         {
-            IocManager.RegisterAssemblyByConvention(typeof(ManagerCVCoreModule).GetAssembly());
+            IocManager.RegisterAssemblyByConvention(typeof(SolutionsCoreModule).GetAssembly());
         }
 
         public override void PostInitialize()

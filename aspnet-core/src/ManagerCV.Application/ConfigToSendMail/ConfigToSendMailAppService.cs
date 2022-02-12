@@ -16,7 +16,7 @@ using ManagerCV.Models;
 
 namespace ManagerCV.ConfigToSendMail
 {
-    public class ConfigToSendMailAppService : ManagerCVAppServiceBase, IConfigToSendMailAppService
+    public class ConfigToSendMailAppService : SolutionsAppServiceBase, IConfigToSendMailAppService
     {
         private readonly IRepository<SysConfigToSendMail> _sysConfigToSendMailRepository;
         private readonly ConfigToSendMailListExcelExporter _configToSendMailListExcelExporter;

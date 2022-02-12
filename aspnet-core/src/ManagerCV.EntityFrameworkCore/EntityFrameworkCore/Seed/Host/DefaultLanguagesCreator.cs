@@ -14,7 +14,7 @@ namespace ManagerCV.EntityFrameworkCore.Seed.Host
 
         private static List<ApplicationLanguage> GetInitialLanguages()
         {
-            var tenantId = ManagerCVConsts.MultiTenancyEnabled ? null : (int?)MultiTenancyConsts.DefaultTenantId;
+            var tenantId = SolutionsConsts.MultiTenancyEnabled ? null : (int?)MultiTenancyConsts.DefaultTenantId;
             return new List<ApplicationLanguage>
             {
                 new ApplicationLanguage(tenantId, "en", "English", "famfamfam-flags gb"),

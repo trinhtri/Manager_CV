@@ -14,7 +14,7 @@ namespace ManagerCV.EntityFrameworkCore
             var builder = new DbContextOptionsBuilder<ManagerCVDbContext>();
             var configuration = AppConfigurations.Get(WebContentDirectoryFinder.CalculateContentRootFolder());
 
-            ManagerCVDbContextConfigurer.Configure(builder, configuration.GetConnectionString(ManagerCVConsts.ConnectionStringName));
+            ManagerCVDbContextConfigurer.Configure(builder, configuration.GetConnectionString(SolutionsConsts.ConnectionStringName));
 
             return new ManagerCVDbContext(builder.Options);
         }

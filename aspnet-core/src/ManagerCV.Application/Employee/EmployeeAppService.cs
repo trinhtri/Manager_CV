@@ -19,7 +19,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ManagerCV.Employee
 {
-    public class EmployeeAppService : ManagerCVAppServiceBase, IEmployeeAppService
+    public class EmployeeAppService : SolutionsAppServiceBase, IEmployeeAppService
     {
         private readonly IRepository<Models.Employee> _employeeRepository;
         private readonly IRepository<Models.EmployeeLanguage> _employeeLanguageRepository;

@@ -4,7 +4,7 @@ using Abp.MultiTenancy;
 
 namespace ManagerCV.Authorization
 {
-    public class ManagerCVAuthorizationProvider : AuthorizationProvider
+    public class SolutionsAuthorizationProvider : AuthorizationProvider
     {
         public override void SetPermissions(IPermissionDefinitionContext context)
         {
@@ -15,7 +15,7 @@ namespace ManagerCV.Authorization
 
         private static ILocalizableString L(string name)
         {
-            return new LocalizableString(name, ManagerCVConsts.LocalizationSourceName);
+            return new LocalizableString(name, SolutionsConsts.LocalizationSourceName);
         }
     }
 }

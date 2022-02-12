@@ -11,8 +11,8 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ManagerCV.Application\ManagerCV.Application.csproj" />
-    <ProjectReference Include="..\..\src\ManagerCV.EntityFrameworkCore\ManagerCV.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\src\ManagerCV.Application\Solutions.Application.csproj" />
+    <ProjectReference Include="..\..\src\ManagerCV.EntityFrameworkCore\Solutions.EntityFrameworkCore.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />

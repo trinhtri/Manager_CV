@@ -15,7 +15,7 @@ using ManagerCV.Tests.DependencyInjection;
 namespace ManagerCV.Tests
 {
     [DependsOn(
-        typeof(ManagerCVApplicationModule),
+        typeof(SolutionsApplicationModule),
         typeof(ManagerCVEntityFrameworkModule),
         typeof(AbpTestBaseModule)
         )]

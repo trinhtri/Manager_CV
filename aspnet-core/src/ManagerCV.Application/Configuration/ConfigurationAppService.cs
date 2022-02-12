@@ -6,7 +6,7 @@ using ManagerCV.Configuration.Dto;
 namespace ManagerCV.Configuration
 {
     [AbpAuthorize]
-    public class ConfigurationAppService : ManagerCVAppServiceBase, IConfigurationAppService
+    public class ConfigurationAppService : SolutionsAppServiceBase, IConfigurationAppService
     {
         public async Task ChangeUiTheme(ChangeUiThemeInput input)
         {

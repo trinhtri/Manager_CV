@@ -9,7 +9,7 @@ using System.Text;
 
 namespace ManagerCV.Shared
 {
-    public abstract class EpPlusExcelExporterBase : ManagerCVAppServiceBase, ITransientDependency
+    public abstract class EpPlusExcelExporterBase : SolutionsAppServiceBase, ITransientDependency
     { 
      public IAppFolders AppFolders { get; set; }
 

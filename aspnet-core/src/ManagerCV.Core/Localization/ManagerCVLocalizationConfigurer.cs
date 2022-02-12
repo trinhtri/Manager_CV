@@ -10,7 +10,7 @@ namespace ManagerCV.Localization
         public static void Configure(ILocalizationConfiguration localizationConfiguration)
         {
             localizationConfiguration.Sources.Add(
-                new DictionaryBasedLocalizationSource(ManagerCVConsts.LocalizationSourceName,
+                new DictionaryBasedLocalizationSource(SolutionsConsts.LocalizationSourceName,
                     new XmlEmbeddedFileLocalizationDictionaryProvider(
                         typeof(ManagerCVLocalizationConfigurer).GetAssembly(),
                         "ManagerCV.Localization.SourceFiles"

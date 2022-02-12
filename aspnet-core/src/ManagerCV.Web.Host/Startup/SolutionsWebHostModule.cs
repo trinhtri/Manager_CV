@@ -7,13 +7,13 @@ using ManagerCV.Configuration;
 namespace ManagerCV.Web.Host.Startup
 {
     [DependsOn(
-       typeof(ManagerCVWebCoreModule))]
-    public class ManagerCVWebHostModule: AbpModule
+       typeof(SolutionsWebCoreModule))]
+    public class SolutionsWebHostModule: AbpModule
     {
         private readonly IWebHostEnvironment _env;
         private readonly IConfigurationRoot _appConfiguration;
 
-        public ManagerCVWebHostModule(IWebHostEnvironment env)
+        public SolutionsWebHostModule(IWebHostEnvironment env)
         {
             _env = env;
             _appConfiguration = env.GetAppConfiguration();
@@ -21,7 +21,7 @@ namespace ManagerCV.Web.Host.Startup
 
         public override void Initialize()
         {
-            IocManager.RegisterAssemblyByConvention(typeof(ManagerCVWebHostModule).GetAssembly());
+            IocManager.RegisterAssemblyByConvention(typeof(SolutionsWebHostModule).GetAssembly());
         }
     }
 }

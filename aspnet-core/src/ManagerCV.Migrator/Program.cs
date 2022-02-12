@@ -15,7 +15,7 @@ namespace ManagerCV.Migrator
         {
             ParseArgs(args);
 
-            using (var bootstrapper = AbpBootstrapper.Create<ManagerCVMigratorModule>())
+            using (var bootstrapper = AbpBootstrapper.Create<SolutionsMigratorModule>())
             {
                 bootstrapper.IocManager.IocContainer
                     .AddFacility<LoggingFacility>(

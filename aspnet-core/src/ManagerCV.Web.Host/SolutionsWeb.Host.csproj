@@ -28,7 +28,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ManagerCV.Web.Core\ManagerCV.Web.Core.csproj" />
+    <ProjectReference Include="..\ManagerCV.Web.Core\Solutions.Web.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Abp.Castle.Log4Net" Version="5.2.0" />

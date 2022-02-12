@@ -10,23 +10,23 @@ using ManagerCV.Migrator.DependencyInjection;
 namespace ManagerCV.Migrator
 {
     [DependsOn(typeof(ManagerCVEntityFrameworkModule))]
-    public class ManagerCVMigratorModule : AbpModule
+    public class SolutionsMigratorModule : AbpModule
     {
         private readonly IConfigurationRoot _appConfiguration;
 
-        public ManagerCVMigratorModule(ManagerCVEntityFrameworkModule abpProjectNameEntityFrameworkModule)
+        public SolutionsMigratorModule(ManagerCVEntityFrameworkModule abpProjectNameEntityFrameworkModule)
         {
             abpProjectNameEntityFrameworkModule.SkipDbSeed = true;
 
             _appConfiguration = AppConfigurations.Get(
-                typeof(ManagerCVMigratorModule).GetAssembly().GetDirectoryPathOrNull()
+                typeof(SolutionsMigratorModule).GetAssembly().GetDirectoryPathOrNull()
             );
         }
 
         public override void PreInitialize()
         {
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
-                ManagerCVConsts.ConnectionStringName
+                SolutionsConsts.ConnectionStringName
             );
 
             Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
@@ -40,7 +40,7 @@ namespace ManagerCV.Migrator
 
         public override void Initialize()
         {
-            IocManager.RegisterAssemblyByConvention(typeof(ManagerCVMigratorModule).GetAssembly());
+            IocManager.RegisterAssemblyByConvention(typeof(SolutionsMigratorModule).GetAssembly());
             ServiceCollectionRegistrar.Register(IocManager);
         }
     }

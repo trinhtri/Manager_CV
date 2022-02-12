@@ -6,13 +6,13 @@ using ManagerCV.Authorization;
 namespace ManagerCV
 {
     [DependsOn(
-        typeof(ManagerCVCoreModule), 
+        typeof(SolutionsCoreModule), 
         typeof(AbpAutoMapperModule))]
-    public class ManagerCVApplicationModule : AbpModule
+    public class SolutionsApplicationModule : AbpModule
     {
         public override void PreInitialize()
         {
-            Configuration.Authorization.Providers.Add<ManagerCVAuthorizationProvider>();
+            Configuration.Authorization.Providers.Add<SolutionsAuthorizationProvider>();
 
             //Adding custom AutoMapper configuration
             Configuration.Modules.AbpAutoMapper().Configurators.Add(CustomDtoMapper.CreateMappings);
@@ -20,7 +20,7 @@ namespace ManagerCV
 
         public override void Initialize()
         {
-            var thisAssembly = typeof(ManagerCVApplicationModule).GetAssembly();
+            var thisAssembly = typeof(SolutionsApplicationModule).GetAssembly();
 
             IocManager.RegisterAssemblyByConvention(thisAssembly);
 

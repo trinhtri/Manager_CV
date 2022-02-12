@@ -7,7 +7,7 @@ using ManagerCV.EntityFrameworkCore.Seed;
 namespace ManagerCV.EntityFrameworkCore
 {
     [DependsOn(
-        typeof(ManagerCVCoreModule), 
+        typeof(SolutionsCoreModule), 
         typeof(AbpZeroCoreEntityFrameworkCoreModule))]
     public class ManagerCVEntityFrameworkModule : AbpModule
     {
